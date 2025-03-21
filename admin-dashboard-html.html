@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스파클린 관리자 대시보드</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-sparkles"></i> 스파<span>클린</span>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <div class="menu-label">메인</div>
+            <div class="menu-item active">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>대시보드</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>예약 관리</span>
+                <div class="badge">23</div>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-broom"></i>
+                <span>서비스 관리</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>고객 관리</span>
+            </div>
+            
+            <div class="menu-label">설정</div>
+            <div class="menu-item">
+                <i class="fas fa-user"></i>
+                <span>직원 관리</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>후기 관리</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>설정</span>
+            </div>
+            <div class="menu-item">
+                <i class="fas fa-question-circle"></i>
+                <span>도움말</span>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- 사이드바 토글 버튼 -->
+    <button class="toggle-sidebar">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <!-- 헤더 -->
+        <div class="top-header">
+            <div class="page-title">
+                <h1>대시보드</h1>
+                <p>오늘의 요약 정보를 확인하세요.</p>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="검색...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-dropdown">
+                    <div class="user-avatar">
+                        <img src="https://via.placeholder.com/100" alt="관리자">
+                    </div>
+                    <div class="user-name">김관리</div>
+                    <i class="fas fa-chevron-down dropdown-toggle"></i>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-user"></i> 프로필
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-cog"></i> 설정
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i> 로그아웃
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 대시보드 위젯 -->
+        <div class="widgets">
+            <div class="widget widget-primary">
+                <div class="widget-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="widget-title">오늘 예약</div>
+                <div class="widget-value">23</div>
+                <div class="widget-change up">
+                    <i class="fas fa-arrow-up"></i> 12% 증가
+                </div>
+                <div class="widget-badge badge-primary">일간</div>
+            </div>
+            <div class="widget widget-success">
+                <div class="widget-icon">
+                    <i class="fas fa-won-sign"></i>
+                </div>
+                <div class="widget-title">이번 달 매출</div>
+                <div class="widget-value">₩4,589,000</div>
+                <div class="widget-change up">
+                    <i class="fas fa-arrow-up"></i> 8% 증가
+                </div>
+                <div class="widget-badge badge-success">월간</div>
+            </div>
+            <div class="widget widget-warning">
+                <div class="widget-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="widget-title">신규 고객</div>
+                <div class="widget-value">156</div>
+                <div class="widget-change up">
+                    <i class="fas fa-arrow-up"></i> 5% 증가
+                </div>
+                <div class="widget-badge badge-warning">월간</div>
+            </div>
+            <div class="widget widget-danger">
+                <div class="widget-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="widget-title">고객 평점</div>
+                <div class="widget-value">4.8</div>
+                <div class="widget-change down">
+                    <i class="fas fa-arrow-down"></i> 0.2 감소
+                </div>
+                <div class="widget-badge badge-danger">월간</div>
+            </div>
+        </div>
+        
+        <!-- 매출 차트 -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">월별 매출 추이</h3>
+                <div class="card-actions">
+                    <button class="btn btn-sm btn-light">일간</button>
+                    <button class="btn btn-sm btn-primary">월간</button>
+                    <button class="btn btn-sm btn-light">연간</button>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="chart-container">
+                    <img src="https://via.placeholder.com/1200x300" alt="매출 차트" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- 예약 관리 -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">최근 예약</h3>
+                <div class="card-actions">
+                    <button class="btn btn-primary" id="openAddBooking">
+                        <i class="fas fa-plus"></i> 예약 추가
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>고객명</th>
+                                <th>서비스</th>
+                                <th>날짜/시간</th>
+                                <th>금액</th>
+                                <th>상태</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 예약 데이터가 여기에 동적으로 로드됩니다 -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <div class="page-item disabled">
+                        <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
+                    </div>
+                    <div class="page-item active">
+                        <a href="#" class="page-link">1</a>
+                    </div>
+                    <div class="page-item">
+                        <a href="#" class="page-link">2</a>
+                    </div>
+                    <div class="page-item">
+                        <a href="#" class="page-link">3</a>
+                    </div>
+                    <div class="page-item">
+                        <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 최근 고객 -->
+        <div class="row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">최근 고객</h3>
+                    <div class="card-actions">
+                        <button class="btn btn-primary btn-sm">
+                            <i class="fas fa-plus"></i> 고객 추가
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>고객명</th>
+                                    <th>연락처</th>
+                                    <th>가입일</th>
+                                    <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 고객 데이터가 여기에 동적으로 로드됩니다 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 서비스 분석 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">서비스 분석</h3>
+                    <div class="card-actions">
+                        <button class="btn btn-light btn-sm">
+                            <i class="fas fa-download"></i> 내보내기
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="chart-container">
+                        <img src="https://via.placeholder.com/600x300" alt="서비스 분석 차트" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 예약 추가 패널 -->
+    <div class="panel-overlay" id="bookingOverlay"></div>
+    <div class="side-panel" id="bookingPanel">
+        <div class="panel-header">
+            <div class="panel-title">새 예약 추가</div>
+            <button class="close-panel" id="closePanel"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="panel-content">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="customerName">고객명</label>
+                    <input type="text" id="customerName" class="form-control" placeholder="고객명을 입력하세요">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerPhone">연락처</label>
+                        <input type="tel" id="customerPhone" class="form-control" placeholder="연락처를 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerEmail">이메일</label>
+                        <input type="email" id="customerEmail" class="form-control" placeholder="이메일을 입력하세요">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">서비스 유형</label>
+                    <select id="serviceType" class="form-control">
+                        <option value="">서비스를 선택하세요</option>
+                        <option value="home">주택 청소</option>
+                        <option value="office">사무실 청소</option>
+                        <option value="move-in">입주 청소</option>
+                        <option value="other">기타</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingDate">예약 날짜</label>
+                        <input type="date" id="bookingDate" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingTime">예약 시간</label>
+                        <input type="time" id="bookingTime" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bookingAddress">주소</label>
+                    <input type="text" id="bookingAddress" class="form-control" placeholder="주소를 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label for="bookingPrice">금액</label>
+                    <input type="text" id="bookingPrice" class="form-control" placeholder="금액을 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label for="bookingStatus">상태</label>
+                    <select id="bookingStatus" class="form-control">
+                        <option value="pending">대기</option>
+                        <option value="confirmed">확정</option>
+                        <option value="completed">완료</option>
+                        <option value="cancelled">취소</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookingNotes">메모</label>
+                    <textarea id="bookingNotes" class="form-control" rows="3" placeholder="추가 메모를 입력하세요"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">예약 추가</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- 알림 -->
+    <div class="notification notification-success" id="notification">
+        <div class="notification-header">
+            <div class="notification-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="notification-title">성공</div>
+            <div class="notification-close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="notification-message">정상적으로 처리되었습니다.</div>
+    </div>
+    
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>
